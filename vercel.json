@@ -14,8 +14,7 @@
     }
   ],
   "routes": [
-    { "src": "/api/generateQrcode", "dest": "/api/generateQrcode.js" },
-    { "src": "/api/checkLogin", "dest": "/api/checkLogin.js" }
-  ],
-  "rewrites": [{ "source": "/:path*", "destination": "/index.html" }]
+    { "src": "/api/(.*)", "dest": "/api/$1.js" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
 }
