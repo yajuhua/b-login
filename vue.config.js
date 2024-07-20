@@ -11,7 +11,5 @@ module.exports = defineConfig({
         }
       }
     }
-  },
-  outputDir: 'dist',
-  publicPath: '/'
+  }
 });
