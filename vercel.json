@@ -7,11 +7,18 @@
     },
     {
       "src": "dist/**/*",
-      "use": "@vercel/static-build"
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
     }
   ],
   "routes": [
     { "src": "/api/generateQrcode", "dest": "/api/generateQrcode.js" },
-    { "src": "/api/checkLogin", "dest": "/api/checkLogin.js" }
+    { "src": "/api/checkLogin", "dest": "/api/checkLogin.js" },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
