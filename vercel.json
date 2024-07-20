@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/*.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "dist/**/*",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "routes": [
+    { "src": "/api/generateQrcode", "dest": "/api/generateQrcode.js" },
+    { "src": "/api/checkLogin", "dest": "/api/checkLogin.js" }
+  ]
+}
